@@ -1,0 +1,136 @@
+.page {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+}
+.empty p {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--charcoal-mid);
+  font-style: italic;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem;
+  align-items: start;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.items { display: flex; flex-direction: column; gap: 0; }
+
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.itemImage {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.itemMaterial {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.25rem;
+}
+
+.itemName {
+  font-family: var(--font-headline);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.25rem;
+}
+
+.itemPrice {
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  color: var(--charcoal-mid);
+}
+
+.removeBtn {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.removeBtn:hover { opacity: 1; color: var(--terracotta); }
+
+.summary {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: sticky;
+  top: 5rem;
+}
+
+.summaryHead {
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--charcoal-mid);
+  border-bottom: 1px solid var(--border);
+}
+
+.totalRow {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  color: var(--charcoal);
+  border-bottom: none;
+  padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; gap: 2rem; }
+  .summary { position: static; }
+}

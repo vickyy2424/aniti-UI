@@ -1,0 +1,159 @@
+.buyPage {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  max-width: 540px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.logoLink {
+  display: block;
+  font-family: var(--font-headline);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--charcoal);
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.subtext {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--charcoal-mid);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.submitBtn:hover { background: var(--terracotta); }
+
+.altAction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--charcoal-mid);
+}
+
+.altAction a {
+  color: var(--terracotta);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* Summary card (checkout) */
+.summaryCard {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--charcoal-mid);
+  border-bottom: 1px solid var(--border);
+}
+.summaryRow:last-child { border-bottom: none; }
+
+.summaryTotal {
+  font-family: var(--font-headline);
+  font-size: 1.125rem;
+  color: var(--charcoal);
+}
+
+/* Success */
+.successPage {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successInner {
+  text-align: center;
+  max-width: 520px;
+  padding: 0 1.5rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+.successMark {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  font-size: 1.5rem;
+}
+
+.successHeading {
+  font-family: var(--font-headline);
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--charcoal);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.successSub {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--charcoal-mid);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.orderNote {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-mid);
+  opacity: 0.6;
+  margin-top: 1.5rem;
+}
