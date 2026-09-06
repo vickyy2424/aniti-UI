@@ -1,7 +1,7 @@
 .productsSection {
   padding: var(--section-pad);
-  background: var(--ivory);
-  border-top: 1px solid var(--border);
+  background: var(--cream);
+  border-top: 1px solid var(--border-cream);
 }
 
 .productsHeader {
@@ -13,14 +13,14 @@
   font-family: var(--font-headline);
   font-size: clamp(1.75rem, 3.5vw, 2.75rem);
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 0.75rem;
 }
 
 .productsSub {
   font-family: var(--font-body);
   font-size: 1.0625rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   line-height: 1.7;
 }
 
@@ -31,18 +31,22 @@
   margin-bottom: 3rem;
 }
 
-.productsFooter { text-align: center; }
+.productsFooter {
+  text-align: center;
+  margin-top: 2rem;
+}
 
-/* About */
+/* About Strip */
 .aboutStrip {
   padding: var(--section-pad);
-  background: var(--cream);
-  border-top: 1px solid var(--border);
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-top: 1px solid var(--border-dark);
 }
 
 .aboutInner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 5rem;
   align-items: center;
 }
@@ -51,34 +55,37 @@
   font-family: var(--font-headline);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 400;
-  line-height: 1.25;
-  color: var(--charcoal);
+  line-height: 1.3;
+  color: var(--cream);
   margin-bottom: 1.5rem;
 }
 .aboutHeading em {
   font-style: italic;
-  color: var(--terracotta);
+  color: var(--amber);
 }
 
 .aboutBody {
   font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--charcoal-mid);
+  font-size: 1.0625rem;
+  color: rgba(245, 236, 215, 0.85);
   line-height: 1.8;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .aboutQuote {
-  border-left: 2px solid var(--brass);
-  padding: 2rem;
-  background: var(--ivory);
+  border-left: 3px solid var(--amber);
+  padding: 2.25rem 2.5rem;
+  background: rgba(44, 26, 14, 0.6);
+  border: 1px solid var(--border-dark);
+  border-left-width: 3px;
+  border-left-color: var(--amber);
 }
 
 .aboutQuote blockquote {
   font-family: var(--font-headline);
   font-size: 1.25rem;
   font-style: italic;
-  color: var(--charcoal);
+  color: var(--cream);
   line-height: 1.8;
 }
 

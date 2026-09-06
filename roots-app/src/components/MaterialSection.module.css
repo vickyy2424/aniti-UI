@@ -1,7 +1,7 @@
 .section {
   padding: var(--section-pad);
-  background: var(--ivory);
-  border-top: 1px solid var(--border);
+  background: var(--cream);
+  border-top: 1px solid var(--border-cream);
 }
 
 .header {
@@ -14,14 +14,14 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
   line-height: 1.2;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
 .subtext {
   font-family: var(--font-body);
   font-size: 1.0625rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   line-height: 1.75;
 }
 
@@ -32,21 +32,25 @@
 }
 
 .card {
-  border: 1px solid var(--border);
-  background: var(--cream);
-  transition: transform 0.3s ease;
+  border: 1px solid var(--border-cream);
+  background: var(--ivory);
+  box-shadow: 0 4px 16px rgba(28, 15, 6, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover { transform: translateY(-4px); }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(28, 15, 6, 0.08);
+}
 
 .imageWrap {
   position: relative;
   height: 320px;
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-cream);
 }
 
 .cardBody {
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
 }
 
 .nameRow {
@@ -59,21 +63,20 @@
   font-family: var(--font-headline);
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
 }
 
 .hindi {
   font-family: var(--font-headline);
-  font-size: 1rem;
-  color: var(--terracotta);
-  opacity: 0.8;
+  font-size: 1.1rem;
+  color: var(--amber);
 }
 
 .desc {
   font-family: var(--font-body);
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   margin-bottom: 1.25rem;
 }
 
@@ -83,10 +86,13 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--terracotta);
-  transition: letter-spacing 0.2s;
+  color: var(--amber);
+  transition: letter-spacing 0.2s, color 0.2s;
 }
-.discover:hover { letter-spacing: 0.25em; }
+.discover:hover {
+  letter-spacing: 0.25em;
+  color: var(--terracotta);
+}
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }

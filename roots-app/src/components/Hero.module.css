@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: var(--dark-brown);
 }
 
 .illustrationWrap {
@@ -16,19 +17,21 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(245, 240, 232, 0.15) 0%,
-    rgba(245, 240, 232, 0.55) 60%,
-    rgba(245, 240, 232, 0.85) 100%
+    105deg,
+    rgba(28, 15, 6, 0.82) 0%,
+    rgba(28, 15, 6, 0.55) 50%,
+    rgba(28, 15, 6, 0.3) 100%
   );
 }
 
 .content {
   position: relative;
   z-index: 2;
-  text-align: center;
+  text-align: left;
   padding: 2rem 1.5rem;
-  max-width: 680px;
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 0 auto;
   animation: fadeUp 0.9s ease both;
 }
 
@@ -38,34 +41,36 @@
 
 .headline {
   font-family: var(--font-headline);
-  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-size: clamp(2.75rem, 7vw, 5rem);
   font-weight: 400;
-  line-height: 1.15;
-  color: var(--charcoal);
+  line-height: 1.1;
+  color: var(--cream);
   margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
+  max-width: 640px;
 }
 
 .headline em {
   font-style: italic;
-  color: var(--terracotta);
+  color: var(--brass-light);
 }
 
 .subtext {
   font-family: var(--font-body);
   font-size: 1.125rem;
-  color: var(--charcoal-mid);
+  color: rgba(245, 236, 215, 0.75);
   line-height: 1.7;
   margin-bottom: 2.5rem;
+  max-width: 480px;
 }
 
 .actions {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
+/* Scroll indicator */
 .scrollHint {
   position: absolute;
   bottom: 2rem;
@@ -73,21 +78,23 @@
   transform: translateX(-50%);
   z-index: 2;
 }
-
 .scrollHint span {
   display: block;
   width: 1px;
   height: 3rem;
-  background: var(--brass);
+  background: var(--amber);
   animation: scrollPulse 2s ease-in-out infinite;
   margin: 0 auto;
 }
 
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
-  50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+  50%       { opacity: 1;   transform: scaleY(1);   transform-origin: top; }
 }
 
 @media (max-width: 768px) {
-  .subtext br { display: none; }
+  .content { text-align: center; }
+  .actions { justify-content: center; }
+  .subtext { margin: 0 auto 2.5rem; }
+  .headline { max-width: 100%; }
 }

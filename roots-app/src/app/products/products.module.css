@@ -2,26 +2,27 @@
   padding-top: 7rem;
   padding-bottom: 5rem;
   min-height: 100vh;
+  background: var(--cream);
 }
 
 .header {
   padding-bottom: 3rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-cream);
 }
 
 .heading {
   font-family: var(--font-headline);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 0.75rem;
 }
 
 .subtext {
   font-family: var(--font-body);
   font-size: 1.0625rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
 }
 
 .grid {

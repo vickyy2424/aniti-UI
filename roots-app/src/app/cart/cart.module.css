@@ -2,6 +2,7 @@
   padding-top: 7rem;
   padding-bottom: 5rem;
   min-height: 100vh;
+  background: var(--cream);
 }
 
 .header {
@@ -12,7 +13,7 @@
   font-family: var(--font-headline);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
 }
 
 .empty {
@@ -21,12 +22,12 @@
   align-items: flex-start;
   gap: 2rem;
   padding: 3rem 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-cream);
 }
 .empty p {
   font-family: var(--font-body);
   font-size: 1.125rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   font-style: italic;
 }
 
@@ -35,7 +36,7 @@
   grid-template-columns: 1fr 360px;
   gap: 4rem;
   align-items: start;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-cream);
   padding-top: 2rem;
 }
 
@@ -47,14 +48,15 @@
   gap: 1.25rem;
   align-items: center;
   padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-cream);
 }
 
 .itemImage {
   position: relative;
   width: 80px;
   height: 80px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-cream);
+  background: #fdfbf7;
   overflow: hidden;
 }
 
@@ -64,7 +66,7 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: var(--amber);
   margin-bottom: 0.25rem;
 }
 
@@ -72,14 +74,14 @@
   font-family: var(--font-headline);
   font-size: 1.0625rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 0.25rem;
 }
 
 .itemPrice {
   font-family: var(--font-ui);
   font-size: 0.875rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
 }
 
 .removeBtn {
@@ -87,28 +89,29 @@
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   cursor: pointer;
   background: none;
   border: none;
-  opacity: 0.5;
-  transition: opacity 0.2s;
+  opacity: 0.6;
+  transition: opacity 0.2s, color 0.2s;
 }
 .removeBtn:hover { opacity: 1; color: var(--terracotta); }
 
 .summary {
-  background: var(--cream);
-  border: 1px solid var(--border);
+  background: var(--ivory);
+  border: 1px solid var(--border-cream);
   padding: 2rem;
   position: sticky;
   top: 5rem;
+  box-shadow: 0 4px 16px rgba(28, 15, 6, 0.04);
 }
 
 .summaryHead {
   font-family: var(--font-headline);
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
@@ -118,14 +121,14 @@
   padding: 0.75rem 0;
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  color: var(--charcoal-mid);
-  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--border-cream);
 }
 
 .totalRow {
   font-family: var(--font-headline);
   font-size: 1.125rem;
-  color: var(--charcoal);
+  color: var(--text-dark);
   border-bottom: none;
   padding-top: 1rem;
 }

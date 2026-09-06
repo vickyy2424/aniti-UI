@@ -1,18 +1,29 @@
 .card {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-cream);
   background: var(--ivory);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(28, 15, 6, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
-.card:hover { transform: translateY(-5px); }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(28, 15, 6, 0.09);
+}
 
-.imageLink { display: block; }
+.imageLink {
+  display: block;
+  background: #fdfbf7;
+}
 
 .imageWrap {
   position: relative;
   width: 100%;
   aspect-ratio: 3/4;
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-cream);
+  background: #fdfbf7;
 }
 
 .hoverLabel {
@@ -20,21 +31,26 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--charcoal);
-  color: var(--ivory);
+  background: var(--dark-brown);
+  color: var(--cream);
   font-family: var(--font-ui);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
   padding: 0.75rem;
   transform: translateY(100%);
   transition: transform 0.25s ease;
+  z-index: 2;
 }
 .card:hover .hoverLabel { transform: translateY(0); }
 
 .body {
-  padding: 1.25rem;
+  padding: 1.35rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .material {
@@ -43,7 +59,7 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--terracotta);
+  color: var(--amber);
   margin-bottom: 0.4rem;
 }
 
@@ -51,8 +67,9 @@
   font-family: var(--font-headline);
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 0.5rem;
+  line-height: 1.25;
 }
 .name a { transition: color 0.2s; }
 .name a:hover { color: var(--terracotta); }
@@ -60,25 +77,26 @@
 .tagline {
   font-family: var(--font-body);
   font-size: 0.875rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   line-height: 1.55;
   font-style: italic;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-cream);
   padding-top: 0.875rem;
-  margin-top: 0.875rem;
+  margin-top: auto;
 }
 
 .price {
   font-family: var(--font-headline);
   font-size: 1.125rem;
-  color: var(--charcoal);
+  color: var(--text-dark);
 }
 
 .exploreBtn {
@@ -88,9 +106,12 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--terracotta);
-  transition: letter-spacing 0.2s;
+  transition: letter-spacing 0.2s, color 0.2s;
 }
-.exploreBtn:hover { letter-spacing: 0.2em; }
+.exploreBtn:hover {
+  letter-spacing: 0.2em;
+  color: var(--amber);
+}
 
 /* Compact variant */
 .compact .imageWrap { aspect-ratio: 1/1; }

@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background: var(--cream);
 }
 
 .logoLink {
@@ -14,22 +15,24 @@
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.3em;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 3rem;
+  transition: color 0.2s;
 }
+.logoLink:hover { color: var(--terracotta); }
 
 .heading {
   font-family: var(--font-headline);
   font-size: 2rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
 
 .subtext {
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   margin-bottom: 2.5rem;
   font-style: italic;
 }
@@ -42,19 +45,22 @@
 .submitBtn {
   width: 100%;
   padding: 0.875rem;
-  background: var(--charcoal);
-  color: var(--ivory);
+  background: var(--dark-brown);
+  color: var(--cream);
   font-family: var(--font-ui);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid var(--dark-brown);
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
   margin-top: 0.5rem;
 }
-.submitBtn:hover { background: var(--terracotta); }
+.submitBtn:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
 
 .altAction {
   display: flex;
@@ -63,7 +69,7 @@
   margin-top: 1.5rem;
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
 }
 
 .altAction a {
@@ -78,10 +84,11 @@
 
 /* Summary card (checkout) */
 .summaryCard {
-  background: var(--cream);
-  border: 1px solid var(--border);
+  background: var(--ivory);
+  border: 1px solid var(--border-cream);
   padding: 1.5rem;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(28, 15, 6, 0.04);
 }
 
 .summaryRow {
@@ -90,15 +97,15 @@
   padding: 0.6rem 0;
   font-family: var(--font-body);
   font-size: 0.9375rem;
-  color: var(--charcoal-mid);
-  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--border-cream);
 }
 .summaryRow:last-child { border-bottom: none; }
 
 .summaryTotal {
   font-family: var(--font-headline);
   font-size: 1.125rem;
-  color: var(--charcoal);
+  color: var(--text-dark);
 }
 
 /* Success */
@@ -109,6 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--cream);
 }
 
 .successInner {
@@ -129,13 +137,14 @@
   justify-content: center;
   margin: 0 auto 2rem;
   font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(74, 103, 65, 0.3);
 }
 
 .successHeading {
   font-family: var(--font-headline);
   font-size: 2.25rem;
   font-weight: 400;
-  color: var(--charcoal);
+  color: var(--text-dark);
   font-style: italic;
   margin-bottom: 0.75rem;
 }
@@ -143,7 +152,7 @@
 .successSub {
   font-family: var(--font-body);
   font-size: 1.0625rem;
-  color: var(--charcoal-mid);
+  color: var(--text-mid);
   margin-bottom: 2.5rem;
   line-height: 1.7;
 }
@@ -153,7 +162,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--charcoal-mid);
-  opacity: 0.6;
+  color: var(--text-mid);
+  opacity: 0.7;
   margin-top: 1.5rem;
 }
